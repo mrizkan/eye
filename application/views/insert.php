@@ -12,6 +12,15 @@
         <?php $this->load->view('inc/leftbar'); ?>
 
     </div>
+
+    <!----- insert button styling-->
+    <style>
+
+        .button-list {
+            overflow: hidden;
+        }
+    </style>
+    <!----- insert button styling-->
     <!-- Left Sidebar End -->
 
     <!-- ============================================================== -->
@@ -46,11 +55,11 @@
 
                 <div class="row">
                     <div class="col-sm-12">
+                        <?= form_open('Customer/cinsert'); ?>
                         <div class="card-box">
-
                             <div class="row">
                                 <div class="col-lg-12 ">
-                                    <?= form_open('Customer/cinsert'); ?>
+
                                     <div class="row">
                                         <div class="col-lg-9 ">
                                             <fieldset class="form-group">
@@ -58,20 +67,17 @@
                                                 <input type="text" class="form-control" required="" name="cname"
                                                        placeholder="Customer Name" data-parsley-id="34"
                                                        value="<?php echo set_value('cname'); ?>">
-                                                <!--<small class="text-muted">We'll never share your email with anyone
-                                                    else.
-                                                </small>-->
+
                                             </fieldset>
                                         </div>
+
                                         <div class="col-lg-3 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1">Reference Number</label>
-                                                <input data-parsley-type="number" data-parsley-maxlength="3" type="text" class="form-control" required="" name="rnum"
-                                                       placeholder="Reference Number" data-parsley-id="46" data-parsley-id="56"
+                                                <input type="text" class="form-control" required="" name="rnum"
+                                                       placeholder="Reference Number" data-parsley-id="56"
                                                        value="<?php echo set_value('rnum'); ?>">
-                                                <!--<small class="text-muted">We'll never share your email with anyone
-                                                    else.
-                                                </small>-->
+
                                             </fieldset>
                                         </div>
 
@@ -83,15 +89,25 @@
                                                        value="<?php echo set_value('address'); ?>">
                                             </fieldset>
                                         </div>
-                                        <div class="col-lg-4 ">
+                                        <div class="col-lg-3 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputPassword1">Age</label>
                                                 <input type="text" class="form-control" required="" name="age"
-                                                       placeholder="Age" data-parsley-id="34"
+                                                       placeholder="Age" data-parsley-maxlength="2"
+                                                       data-parsley-type="number" data-parsley-id="34"
                                                        value="<?php echo set_value('age'); ?>">
                                             </fieldset>
                                         </div>
-                                        <div class="col-lg-4 ">
+                                        <div class="col-lg-3 ">
+                                            <fieldset class="form-group">
+                                                <label for="exampleInputPassword1">Mobile Number</label>
+                                                <input type="text" class="form-control" required="" name="mobile"
+                                                       placeholder="Mobile Number" data-parsley-minlength="10"
+                                                       data-parsley-type="number" data-parsley-id="34"
+                                                       value="<?php echo set_value('mobile'); ?>">
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-lg-3 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputPassword1">Remarks/Symptams</label>
                                                 <input type="text" class="form-control" name="remark"
@@ -99,7 +115,7 @@
                                                        value="<?php echo set_value('remark'); ?>">
                                             </fieldset>
                                         </div>
-                                        <div class="col-lg-4 ">
+                                        <div class="col-lg-3 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputPassword1">Physical Condition/History</label>
                                                 <input type="text" class="form-control" name="history"
@@ -124,124 +140,102 @@
                                         </div>
                                         <div class="col-lg-3 ">
                                             <fieldset class="form-group">
-                                                <label for="exampleInputEmail1">U.V.A.</label>
-                                                <input type="text" class="form-control" required="" name="uva"
+                                                <label for="exampleInputEmail1">U.V.A. (R)</label>
+                                                <input type="text" class="form-control" name="uva1"
                                                        placeholder="U.V.A." data-parsley-id="34"
-                                                       value="<?php echo set_value('uva'); ?>">
-                                                <!--<small class="text-muted">We'll never share your email with anyone
-                                                    else.
-                                                </small>-->
+                                                       value="<?php echo set_value('uva1'); ?>">
+
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-3 ">
                                             <fieldset class="form-group">
-                                                <label for="exampleInputEmail1">P.H.</label>
-                                                <input type="text" class="form-control" required="" name="ph"
+                                                <label for="exampleInputEmail1">P.H. (R)</label>
+                                                <input type="text" class="form-control" name="ph1"
                                                        placeholder="P.H." data-parsley-id="34"
-                                                       value="<?php echo set_value('ph'); ?>">
-                                                <!--<small class="text-muted">We'll never share your email with anyone
-                                                    else.
-                                                </small>-->
+                                                       value="<?php echo set_value('ph1'); ?>">
+
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-3 ">
                                             <fieldset class="form-group">
-                                                <label for="exampleInputEmail1">U.V.A.</label>
-                                                <input type="text" class="form-control" required="" name="uva2"
+                                                <label for="exampleInputEmail1">U.V.A. (L)</label>
+                                                <input type="text" class="form-control" name="uva2"
                                                        placeholder="U.V.A." data-parsley-id="34"
                                                        value="<?php echo set_value('uva2'); ?>">
-                                                <!--<small class="text-muted">We'll never share your email with anyone
-                                                    else.
-                                                </small>-->
+
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-3 ">
                                             <fieldset class="form-group">
-                                                <label for="exampleInputEmail1">P.H.</label>
-                                                <input type="text" class="form-control" required="" name="ph2"
+                                                <label for="exampleInputEmail1">P.H. (L)</label>
+                                                <input type="text" class="form-control" name="ph2"
                                                        placeholder="P.H." data-parsley-id="34"
                                                        value="<?php echo set_value('ph2'); ?>">
-                                                <!--<small class="text-muted">We'll never share your email with anyone
-                                                    else.
-                                                </small>-->
+
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-6 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1">6M</label>
-                                                <input type="text" class="form-control" required="" name="6m"
+                                                <input type="text" class="form-control" name="6m1"
                                                        placeholder="6M" data-parsley-id="34"
-                                                       value="<?php echo set_value('6m'); ?>">
-                                                <!--<small class="text-muted">We'll never share your email with anyone
-                                                    else.
-                                                </small>-->
+                                                       value="<?php echo set_value('6m1'); ?>">
+
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-6 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1">6M</label>
-                                                <input type="text" class="form-control" required="" name="6m2"
+                                                <input type="text" class="form-control" name="6m2"
                                                        placeholder="6M" data-parsley-id="34"
-                                                       value="<?php echo set_value('6m'); ?>">
-                                                <!--<small class="text-muted">We'll never share your email with anyone
-                                                    else.
-                                                </small>-->
+                                                       value="<?php echo set_value('6m2'); ?>">
+
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-12 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1">N.P.C.</label>
-                                                <input type="text" class="form-control" required="" name="npc"
+                                                <input type="text" class="form-control" name="npc"
                                                        placeholder="N.P.C." data-parsley-id="34"
                                                        value="<?php echo set_value('npc'); ?>">
-                                                <!--<small class="text-muted">We'll never share your email with anyone
-                                                    else.
-                                                </small>-->
+
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-12 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1">Version</label>
-                                                <input type="text" class="form-control" required="" name="version"
+                                                <input type="text" class="form-control" name="version"
                                                        placeholder="Version" data-parsley-id="34"
                                                        value="<?php echo set_value('version'); ?>">
-                                                <!--<small class="text-muted">We'll never share your email with anyone
-                                                    else.
-                                                </small>-->
+
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-2 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1">ć-HbRx</label>
-                                                <input type="text" class="form-control" required="" name="hbrx"
+                                                <input type="text" class="form-control" name="hbrx1"
                                                        placeholder="ć-HbRx" data-parsley-id="34"
-                                                       value="<?php echo set_value('hbrx'); ?>">
-                                                <!--<small class="text-muted">We'll never share your email with anyone
-                                                    else.
-                                                </small>-->
-                                            </fieldset>
-                                        </div>
-                                        <div class="col-lg-5 ">
-                                            <fieldset class="form-group">
-                                                <label for="exampleInputEmail1"><br></label>
-
-                                                <input type="text" class="form-control" required="" name="hbrx1"
-                                                       placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('hbrx1'); ?>">
-                                                <!--<small class="text-muted">We'll never share your email with anyone
-                                                    else.
-                                                </small>-->
+
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-5 ">
                                             <fieldset class="form-group">
-                                                <label for="exampleInputEmail1"><br></label>
-                                                <input type="text" class="form-control" required="" name="hbrx2"
+                                                <label for="exampleInputEmail1" style="margin-left: 49%">R</label>
+
+                                                <input type="text" class="form-control" name="hbrx2"
                                                        placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('hbrx2'); ?>">
-                                                <!--<small class="text-muted">We'll never share your email with anyone
-                                                    else.
-                                                </small>-->
+
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-lg-5 ">
+                                            <fieldset class="form-group">
+                                                <label for="exampleInputEmail1" style="margin-left: 49%">L</label>
+                                                <input type="text" class="form-control" name="hbrx3"
+                                                       placeholder="" data-parsley-id="34"
+                                                       value="<?php echo set_value('hbrx3'); ?>">
+
                                             </fieldset>
                                         </div>
 
@@ -274,9 +268,9 @@
                                         <div class="col-lg-2 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1"><br></label>
-                                                <input type="text" class="form-control" name="r1"
-                                                       placeholder="" data-parsley-id="34"
-                                                       value="<?php echo set_value('r2'); ?>">
+                                                <input type="text" class="form-control" required="" name="r1"
+                                                       placeholder="" data-parsley-id="56"
+                                                       value="<?php echo set_value('r1'); ?>">
 
                                             </fieldset>
 
@@ -284,7 +278,7 @@
                                         <div class="col-lg-1 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1">Sph:</label>
-                                                <input type="text" class="form-control" name="sph1"
+                                                <input type="text" class="form-control" required="" name="sph1"
                                                        placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('sph1'); ?>">
 
@@ -314,7 +308,7 @@
                                         <div class="col-lg-1 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1">Sph:</label>
-                                                <input type="text" class="form-control" name="sph2"
+                                                <input type="text" class="form-control" required="" name="sph2"
                                                        placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('sph2'); ?>">
 
@@ -344,7 +338,7 @@
                                         <div class="col-lg-2 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1" style="margin-left: 49%">L</label>
-                                                <input type="text" class="form-control" name="l1"
+                                                <input type="text" class="form-control" required="" name="l1"
                                                        placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('l2'); ?>">
 
@@ -365,7 +359,7 @@
                                         <div class="col-lg-2 ">
                                             <fieldset class="form-group">
 
-                                                <input type="text" class="form-control" name="r2"
+                                                <input type="text" class="form-control" required="" name="r2"
                                                        placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('r2'); ?>">
 
@@ -375,7 +369,7 @@
                                         <div class="col-lg-1 ">
                                             <fieldset class="form-group">
 
-                                                <input type="text" class="form-control" name="sph3"
+                                                <input type="text" class="form-control" required="" name="sph3"
                                                        placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('sph3'); ?>">
 
@@ -406,7 +400,7 @@
                                         <div class="col-lg-1 ">
                                             <fieldset class="form-group">
 
-                                                <input type="text" class="form-control" name="sph4"
+                                                <input type="text" class="form-control" required="" name="sph4"
                                                        placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('sph4'); ?>">
 
@@ -436,7 +430,7 @@
                                         <div class="col-lg-2 ">
                                             <fieldset class="form-group">
 
-                                                <input type="text" class="form-control" name="l2"
+                                                <input type="text" class="form-control" required="" name="l2"
                                                        placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('l2'); ?>">
 
@@ -446,7 +440,7 @@
                                         <div class="col-lg-4 ">
                                         </div>
                                         <div class="col-lg-4 ">
-                                        <small class="text-muted">Ophthalmoscope/ Slit Lamp Microscope
+                                            <small class="text-muted">Ophthalmoscope/Opthalmoscope
                                         </small>
                                         </div>
                                         <div class="col-lg-4 ">
@@ -660,14 +654,15 @@
                                         </div>
                                         <div class="col-lg-12 ">
                                             <fieldset class="form-group">
-                                                <textarea class="form-control" id="description" name="remarks"
+                                                <textarea class="form-control" required="" id="description"
+                                                          name="diagnosis"
                                                           rows="3" placeholder=""></textarea>
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-6 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1">Lense Model</label>
-                                                <input type="text" class="form-control" name="lense"
+                                                <input type="text" class="form-control" required="" name="lense"
                                                        placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('lense'); ?>">
 
@@ -677,7 +672,7 @@
                                         <div class="col-lg-6 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1">Total Amount</label>
-                                                <input type="text" class="form-control" name="total"
+                                                <input type="text" class="form-control" required="" name="total"
                                                        placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('total'); ?>">
 
@@ -689,14 +684,18 @@
 
 
                                     </div>
-                                    <button type="submit" class="btn btn-primary" style="float: right">Insert</button>
-                                    <?php echo form_close(); ?>
+
                                 </div><!-- end col -->
 
 
                             </div><!-- end row -->
+                            <div class="button-list">
+                                <button type="submit" class="btn btn-primary" style="float: right">Insert</button>
+                                <?php echo form_close(); ?>
+                            </div>
                         </div>
 
+                        <?php echo form_close(); ?>
 
                     </div><!-- end col -->
                 </div>

@@ -3,9 +3,9 @@
 
     <!-- LOGO -->
     <div class="topbar-left">
-        <a href="<?php echo base_url(); ?>Welcome/index" class="logo">
+        <a href="<?php echo base_url(); ?>Customer" class="logo">
             <!--<i class="zmdi zmdi-group-work icon-c-logo"></i>-->
-            <span>Eye with us Opticals</span></a>
+            <span><img src="<?php echo base_url(); ?>images/logo.png" width="100px" height="60px"></span></a>
     </div>
 
     <nav class="navbar navbar-custom">
@@ -15,12 +15,7 @@
                     <i class="zmdi zmdi-menu"></i>
                 </button>
             </li>
-            <!--<li class="nav-item hidden-mobile">
-                <form role="search" class="app-search">
-                    <input type="text" placeholder="Search..." class="form-control">
-                    <a href=""><i class="fa fa-search"></i></a>
-                </form>
-            </li>-->
+
         </ul>
 
     </nav>

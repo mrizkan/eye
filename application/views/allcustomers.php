@@ -39,6 +39,7 @@
                                     <th>Reference Number</th>
                                     <th>Customer Name</th>
                                     <th>Address</th>
+                                    <th>Mobile Number</th>
                                     <th>Option</th>
 
                                 </tr>
@@ -46,31 +47,37 @@
 
 
                                 <tbody>
-                               <!-- --><?php
-/*                                if ($pdata->num_rows() > 0) {
-                                    foreach ($pdata->result() as $row) {
-                                        */?>
+                                <?php
+                                if ($cdata->num_rows() > 0) {
+                                    foreach ($cdata->result() as $row) {
+                                        ?>
                                         <tr>
-                                            <td>Rizkan<?php /*echo $row->rnum; */?></td>
-                                            <td>Rizkan<?php /*echo $row->pname; */?></td>
-                                            <td>Rizkan<?php /*echo $row->description; */?></td>
-                                            <td><a href="<?/*= base_url() . 'Welcome/pedit/' . $row->pid */?>"><button type="button" class="btn btn-warning-outline waves-effect waves-light">View</button></a></td>
+                                            <td><?php echo $row->rnum; ?></td>
+                                            <td><?php echo $row->cname; ?></td>
+                                            <td><?php echo $row->address; ?></td>
+                                            <td><?php echo $row->mobile; ?></td>
+                                            <td><a href="<?= base_url('Vcustomer/dview/'); ?>">
+                                                    <button type="button"
+                                                            class="btn btn-warning-outline waves-effect waves-light">
+                                                        View
+                                                    </button>
+                                                </a></td>
 
                                         </tr>
 
 
-                                  <!--  <?php
-/*                                    }
+                                        <?php
+                                    }
                                 } else {
-                                    */?>
+                                    ?>
                                     <tr>
                                         <td>No Data Found</td>
                                     </tr>
 
-                                --><?php
-/*
+                                    <?php
+
                                 }
-                                */?>
+                                ?>
 
                                 </tbody>
                             </table>

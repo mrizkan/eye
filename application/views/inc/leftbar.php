@@ -4,6 +4,7 @@
     <div id="sidebar-menu">
         <ul>
             <!--<li class="text-muted menu-title">Options</li>-->
+            <!--<li class="text-muted menu-title">Options</li>-->
 
             <li class="has_sub">
                 <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-user"></i> <span> Insert </span> <span class="menu-arrow"></span></a>
@@ -15,7 +16,8 @@
             <li class="has_sub">
                 <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-search"></i> <span> View </span> <span class="menu-arrow"></span></a>
                 <ul class="list-unstyled">
-                    <li><a href="<?php echo base_url('Vcustomer/getall'); ?>"><i class="fa fa-info"></i>View Customer</a></li>
+                    <li><a href="<?php echo base_url('Vcustomer/view'); ?>"><i class="fa fa-info"></i>View Customer</a>
+                    </li>
 
 
                 </ul>

@@ -18,10 +18,23 @@ class Vcustomer extends CI_Controller {
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
-    public function getall()
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Viewcustomer');
+
+    }
+
+    public function view()
     {
 
-//        echo 'asdasdasd';
-        $this->load->view('allcustomers');
+        $data["cdata"] = $this->Viewcustomer->view();
+        $this->load->view("allcustomers", $data);
+    }
+
+    public function dview()
+    {
+
+        $this->load->view('cdetails');
     }
 }

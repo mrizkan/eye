@@ -18,7 +18,17 @@ class Customer extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Cinsert');
+
+
+    }
+
+
+    public function index()
 	{
 
 		$this->load->view('insert');
@@ -32,7 +42,7 @@ class Customer extends CI_Controller {
         if ($this->form_validation->run() == FALSE)
         {
 
-            $this->load->view('Welcome/add');
+            $this->load->view('Customer');
 
         }
         else
@@ -41,14 +51,69 @@ class Customer extends CI_Controller {
 
             $data2 = array(
                 'cname' => $this->input->post('cname'),
+                'rnum' => $this->input->post('rnum'),
+                'address' => $this->input->post('address'),
+                'age' => $this->input->post('age'),
+                'mobile' => $this->input->post('mobile'),
+                'remark' => $this->input->post('remark'),
+                'history' => $this->input->post('history'),
+                'uva1' => $this->input->post('uva1'),
+                'ph1' => $this->input->post('ph1'),
+                'uva2' => $this->input->post('uva2'),
+                'ph2' => $this->input->post('ph2'),
+                '6m1' => $this->input->post('6m1'),
+                '6m2' => $this->input->post('6m2'),
+                'npc' => $this->input->post('npc'),
+                'version' => $this->input->post('version'),
+                'hbrx1' => $this->input->post('hbrx1'),
+                'hbrx2' => $this->input->post('hbrx2'),
+                'hbrx3' => $this->input->post('hbrx3'),
+                'r1' => $this->input->post('r1'),
+                'sph1' => $this->input->post('sph1'),
+                'cyl1' => $this->input->post('cyl1'),
+                'axis1' => $this->input->post('axis1'),
+                'sph2' => $this->input->post('sph2'),
+                'cyl2' => $this->input->post('cyl2'),
+                'axis2' => $this->input->post('axis2'),
+                'l1' => $this->input->post('l1'),
+                'r2' => $this->input->post('r2'),
+                'sph3' => $this->input->post('sph3'),
+                'cyl3' => $this->input->post('cyl3'),
+                'axis3' => $this->input->post('axis3'),
+                'sph4' => $this->input->post('sph4'),
+                'cyl4' => $this->input->post('cyl4'),
+                'axis4' => $this->input->post('axis4'),
+                'l2' => $this->input->post('l2'),
+                'cornea1' => $this->input->post('cornea1'),
+                'cornea2' => $this->input->post('cornea2'),
+                'iris1' => $this->input->post('iris1'),
+                'iris2' => $this->input->post('iris2'),
+                'media1' => $this->input->post('media1'),
+                'media2' => $this->input->post('media2'),
+                'fundus1' => $this->input->post('fundus1'),
+                'fundus2' => $this->input->post('fundus2'),
+                'ac1' => $this->input->post('ac1'),
+                'ac2' => $this->input->post('ac2'),
+                'pc1' => $this->input->post('pc1'),
+                'pc2' => $this->input->post('pc2'),
+                'iop1' => $this->input->post('iop1'),
+                'iop2' => $this->input->post('cname'),
+                'diagnosis' => $this->input->post('diagnosis'),
+                'lense' => $this->input->post('lense'),
+                'total' => $this->input->post('total'),
+
+
 
             );
-            $this->insert_model->form_insert($data2);
+
+            $this->Cinsert->insert($data2);
             $this->session->set_flashdata('msg', 'Customer Inserted Successfully');
             $this->session->flashdata('msg');
-            redirect("Addcustomer/add");
+            redirect("Customer");
 
 
         }
     }
+
+
 }
