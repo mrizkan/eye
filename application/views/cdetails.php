@@ -25,18 +25,8 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="page-title-box">
-                            <h4 class="page-title">Invoice</h4>
-                            <ol class="breadcrumb p-0">
-                                <li>
-                                    <a href="#">Uplon</a>
-                                </li>
-                                <li>
-                                    <a href="#">Pages</a>
-                                </li>
-                                <li class="active">
-                                    Invoice
-                                </li>
-                            </ol>
+                            <h4 class="page-title">Customer Details</h4>
+
                             <div class="clearfix"></div>
                         </div>
                     </div>
@@ -50,33 +40,20 @@
                                 <h4>Invoice</h4>
                             </div> -->
                             <div class="panel-body">
-                                <div class="clearfix">
-                                    <div class="pull-left">
-                                        <h3 class="logo">Uplon</h3>
-                                    </div>
-                                    <div class="pull-right">
-                                        <h5>Invoice # <br>
-                                            <small>2016-04-23654789</small>
-                                        </h5>
-                                    </div>
-                                </div>
-                                <hr>
                                 <div class="row">
                                     <div class="col-xs-12">
 
                                         <div class="pull-xs-left m-t-30">
                                             <address>
-                                                <strong>Twitter, Inc.</strong><br>
-                                                795 Folsom Ave, Suite 600<br>
-                                                San Francisco, CA 94107<br>
-                                                <abbr title="Phone">P:</abbr> (123) 456-7890
+                                                <strong>Eye with us Opticals</strong><br>
+                                                91B, Galle Road,<br>
+                                                Henamulla,<br>
+                                                Panadura.<br>
+                                                <i class="fa fa-phone"></i> +94 778 280 494
                                             </address>
                                         </div>
                                         <div class="pull-xs-right m-t-30">
-                                            <p><strong>Order Date: </strong> Jan 17, 2016</p>
-                                            <p class="m-t-10"><strong>Order Status: </strong> <span
-                                                        class="label label-danger">Pending</span></p>
-                                            <p class="m-t-10"><strong>Order ID: </strong> #123456</p>
+                                            <p><strong>Date: </strong><?php echo date("Y/m/d") ?></p>
                                         </div>
                                     </div><!-- end col -->
                                 </div>
