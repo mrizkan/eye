@@ -615,14 +615,14 @@
                     <fieldset class="form-group">
                         <textarea class="form-control" id="description" name="fundus1"
                                   rows="3" readonly
-                                  value="<?php echo $row->fundus1; ?>"></textarea>
+                        ><?php echo $row->fundus1; ?></textarea>
                     </fieldset>
                 </div>
                 <div class="col-lg-5 ">
                     <fieldset class="form-group">
                         <textarea class="form-control" id="description" name="fundus2"
                                   rows="3" readonly
-                                  value="<?php echo $row->fundus2; ?>"></textarea>
+                        ><?php echo $row->fundus2; ?></textarea>
                     </fieldset>
                 </div>
                 <div class="col-lg-2 ">

@@ -100,7 +100,7 @@
                                     <div class="col-lg-3 ">
                                         <label>Mobile Number: &NonBreakingSpace;</label><label><?php echo $row->mobile; ?></label>
                                     </div>
-                                    <div class="col-lg-3 ">
+                                    <div class="col-lg-5 ">
                                         <label>Remarks/Symptams: &NonBreakingSpace;</label><label><?php echo $row->remark; ?></label>
                                     </div>
 
@@ -113,8 +113,35 @@
                                     <div class="col-lg-3 ">
                                         <label>Physical Condition/History: &NonBreakingSpace;</label><label><?php echo $row->history; ?></label>
                                     </div>
-
-
+                                    <div class="col-lg-3 ">
+                                        <label>U.V.A. (R):
+                                            &NonBreakingSpace;</label><label><?php echo $row->uva1; ?></label>
+                                    </div>
+                                    <div class="col-lg-3 ">
+                                        <label>P.H. (R):
+                                            &NonBreakingSpace;</label><label><?php echo $row->ph1; ?></label>
+                                    </div>
+                                    <div class="col-lg-3 ">
+                                        <label>U.V.A. (L):
+                                            &NonBreakingSpace;</label><label><?php echo $row->uva2; ?></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 ">
+                                <div class="row">
+                                    <div class="col-lg-3 ">
+                                        <label>P.H. (L):
+                                            &NonBreakingSpace;</label><label><?php echo $row->ph2; ?></label>
+                                    </div>
+                                    <div class="col-lg-3 ">
+                                        <label>6M: &NonBreakingSpace;</label><label><?php echo $row->m6m1; ?></label>
+                                    </div>
+                                    <div class="col-lg-3 ">
+                                        <label>6M: &NonBreakingSpace;</label><label><?php echo $row->m6m2; ?></label>
+                                    </div>
+                                    <div class="col-lg-3 ">
+                                        <label>N.P.C.: &NonBreakingSpace;</label><label><?php echo $row->npc; ?></label>
+                                    </div>
                                 </div>
                             </div>
                             <!--if want back button will come here-->

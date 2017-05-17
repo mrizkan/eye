@@ -44,4 +44,16 @@ class Vcustomer extends CI_Controller {
 
     }
 
+    public function cprint($id)
+    {
+        if ($id > 0) {
+            $data["fetch_data"] = $this->Viewcustomer->fetch_cdata($id);
+            $this->load->view("ppage", ['data' => $data]);
+        } else {
+
+            $this->load->view('insert');
+        }
+
+    }
+
 }

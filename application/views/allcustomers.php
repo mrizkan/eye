@@ -61,6 +61,12 @@
                                                             class="btn btn-warning-outline waves-effect waves-light">
                                                         View
                                                     </button>
+                                                </a>
+                                                <a href="<?= base_url() . 'Vcustomer/cprint/' . $row->cid ?>">
+                                                    <button type="button"
+                                                            class="btn btn-danger-outline waves-effect waves-light">
+                                                        Print
+                                                    </button>
                                                 </a></td>
 
                                         </tr>
