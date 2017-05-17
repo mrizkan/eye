@@ -32,9 +32,16 @@ class Vcustomer extends CI_Controller {
         $this->load->view("allcustomers", $data);
     }
 
-    public function dview()
+    public function dview($id)
     {
+        if ($id > 0) {
+            $data["fetch_data"] = $this->Viewcustomer->fetch_cdata($id);
+            $this->load->view("cdetails", ['data' => $data]);
+        } else {
 
-        $this->load->view('cdetails');
+            $this->load->view('insert');
+        }
+
     }
+
 }
