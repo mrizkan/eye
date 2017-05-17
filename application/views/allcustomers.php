@@ -1,15 +1,15 @@
-<?php include('inc/header.php')?>
+<?php include('inc/header.php') ?>
 <body class="fixed-left">
 
 <!-- Begin page -->
 <div id="wrapper">
 
-    <?php include ('inc/top_bar.php')?>
+    <?php include('inc/top_bar.php') ?>
 
 
     <!-- ========== Left Sidebar Start ========== -->
     <div class="left side-menu">
-        <?php $this->load->view('inc/leftbar');  ?>
+        <?php $this->load->view('inc/leftbar'); ?>
 
     </div>
     <div class="content-page">
@@ -22,7 +22,7 @@
                         <div class="card-box table-responsive">
                             <h4 class="m-t-0 header-title"><b>Customer Details</b></h4>
 
-                           <!-- <?php
+                            <!-- <?php
 /*                            $noti=$this->session->flashdata('msg');
                             if(isset($noti)){
                                 */?>
@@ -31,7 +31,7 @@
                                     <?/*= $this->session->flashdata('msg'); */?>
                                 </div>
 
-                            --><?php /*}  */?>
+                            --><?php /*}  */ ?>
 
                             <table id="datatable-buttons" class="table table-striped table-bordered">
                                 <thead>
@@ -56,7 +56,7 @@
                                             <td><?php echo $row->cname; ?></td>
                                             <td><?php echo $row->address; ?></td>
                                             <td><?php echo $row->mobile; ?></td>
-                                            <td><a href="<?= base_url('Vcustomer/dview/'); ?>">
+                                            <td><a href="<?= base_url() . 'Vcustomer/dview/' . $row->cid ?>">
                                                     <button type="button"
                                                             class="btn btn-warning-outline waves-effect waves-light">
                                                         View
@@ -66,7 +66,7 @@
                                         </tr>
 
 
-                                        <?php
+                                    <?php
                                     }
                                 } else {
                                     ?>
@@ -74,7 +74,7 @@
                                         <td>No Data Found</td>
                                     </tr>
 
-                                    <?php
+                                <?php
 
                                 }
                                 ?>
@@ -83,12 +83,13 @@
                             </table>
                         </div>
                     </div>
-                </div> <!-- end row -->
+                </div>
+                <!-- end row -->
 
-                <?php include ('inc/footer.php')?>
+                <?php include('inc/footer.php') ?>
 
                 <script type="text/javascript">
-                    $(document).ready(function() {
+                    $(document).ready(function () {
                         $('#datatable').DataTable();
 
                         //Buttons examples
@@ -99,6 +100,6 @@
 
                         table.buttons().container()
                             .appendTo('#datatable-buttons_wrapper .col-md-6:eq(0)');
-                    } );
+                    });
 
                 </script>

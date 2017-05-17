@@ -6,7 +6,12 @@
 <div id="wrapper">
 
 <?php include('inc/top_bar.php') ?>
+    <style>
 
+        .button-list {
+            overflow: hidden;
+        }
+    </style>
 
     <!-- ========== Left Sidebar Start ========== -->
     <div class="left side-menu">
@@ -754,7 +759,9 @@
 
                 </div><!-- end row -->
                 <div class="button-list">
-
+                    <button type="button" class="btn btn-primary btn-rounded waves-effect waves-light" style="float: right" onclick="window.location='<?php echo site_url("Vcustomer/view");?>'">
+                                                   <span class="btn-label"><i class="fa fa-arrow-left"></i>
+                                                   </span>Back</button>
                     <?php echo form_close(); ?>
                     <?php } ?>
                 </div>

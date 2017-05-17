@@ -177,18 +177,18 @@
                                         <div class="col-lg-6 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1">6M</label>
-                                                <input type="text" class="form-control" name="6m1"
+                                                <input type="text" class="form-control" name="m6m1"
                                                        placeholder="6M" data-parsley-id="34"
-                                                       value="<?php echo set_value('6m1'); ?>">
+                                                       value="<?php echo set_value('m6m1'); ?>">
 
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-6 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1">6M</label>
-                                                <input type="text" class="form-control" name="6m2"
+                                                <input type="text" class="form-control" name="m6m2"
                                                        placeholder="6M" data-parsley-id="34"
-                                                       value="<?php echo set_value('6m2'); ?>">
+                                                       value="<?php echo set_value('m6m2'); ?>">
 
                                             </fieldset>
                                         </div>

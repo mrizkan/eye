@@ -10,7 +10,13 @@ class Viewcustomer extends CI_Model
     public function view()
     {
 
-        $query = $this->db->query("select rnum, cname, address, mobile from customer");
+        $query = $this->db->query("select cid, rnum, cname, address, mobile from customer");
+        return $query;
+    }
+
+    function fetch_cdata($id)
+    {
+        $query = $this->db->query("select * from customer where cid = $id");
         return $query;
     }
 
