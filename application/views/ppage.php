@@ -33,7 +33,7 @@
             <div class="container">
 
                 <div class="row">
-                    <div class="col-xs-12">
+                    <div class="col-xs-8">
                         <div class="page-title-box">
                             <!--<h4 class="page-title">Customer Details</h4>-->
 
@@ -51,7 +51,7 @@
                             </div> -->
                             <div class="panel-body">
                                 <div class="row">
-                                    <div class="col-xs-12">
+                                    <div class="col-xs-10">
 
                                         <div class="pull-xs-left m-t-30">
                                             <address>
@@ -144,11 +144,68 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-lg-12 ">
+                                <div class="row">
+                                    <div class="col-lg-3 ">
+                                        <label>Version: &NonBreakingSpace;</label><label><?php echo $row->version; ?></label>
+                                    </div>
+                                    <div class="col-lg-3 ">
+                                        <label>ć-HbRx: &NonBreakingSpace;</label><label><?php echo $row->hbrx1; ?></label>
+                                    </div>
+                                    <div class="col-lg-3 ">
+                                        <label>R: &NonBreakingSpace;</label><label><?php echo $row->hbrx2; ?></label>
+                                    </div>
+                                    <div class="col-lg-3 ">
+                                        <label>L: &NonBreakingSpace;</label><label><?php echo $row->hbrx3; ?></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 ">
+                                <div class="row">
+                                    <div class="col-lg-12 ">
+                                        <label>THE PRESCRIPTION</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                                    <table width="700px" border="1">
+                                        <tr>
+                                            <th>a</th>
+                                            <th>a</th>
+                                            <th>a</th>
+                                            <th>a</th>
+                                            <th>a</th>
+                                            <th>a</th>
+                                            <th>a</th>
+                                            <th>a</th>
+                                            <th>9</th>
+
+                                        </tr>
+                                        <tr><th>a</th><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>8</td></tr>
+                                        <tr><th>a</th><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>7</td></tr>
+                                    </table>
+                            <br><br>
+                            <table width="700px" border="1">
+                                <tr>
+                                    <th>a</th>
+                                    <th>a</th>
+                                    <th>a</th>
+
+                                </tr>
+                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
+                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
+                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
+                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
+                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
+                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
+                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
+                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
+                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
+                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
+                            </table>
                             <!--if want back button will come here-->
 
-                        </div>
 
-                        </div>
 
                     </div>
                 <?php } ?>
