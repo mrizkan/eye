@@ -51,7 +51,7 @@
                             </div> -->
                             <div class="panel-body">
                                 <div class="row">
-                                    <div class="col-xs-10">
+                                    <div class="col-xs-11">
 
                                         <div class="pull-xs-left m-t-30">
                                             <address>
@@ -110,9 +110,12 @@
                             </div>
                             <div class="col-lg-12 ">
                                 <div class="row">
-                                    <div class="col-lg-3 ">
+                                    <div class="col-lg-12 ">
                                         <label>Physical Condition/History: &NonBreakingSpace;</label><label><?php echo $row->history; ?></label>
                                     </div>
+                                    </div>
+                                <div class="col-lg-12 ">
+                                    <div class="row">
                                     <div class="col-lg-3 ">
                                         <label>U.V.A. (R):
                                             &NonBreakingSpace;</label><label><?php echo $row->uva1; ?></label>
@@ -125,14 +128,15 @@
                                         <label>U.V.A. (L):
                                             &NonBreakingSpace;</label><label><?php echo $row->uva2; ?></label>
                                     </div>
+                                        <div class="col-lg-3 ">
+                                            <label>P.H. (L):
+                                                &NonBreakingSpace;</label><label><?php echo $row->ph2; ?></label>
+                                        </div>
                                 </div>
                             </div>
                             <div class="col-lg-12 ">
                                 <div class="row">
-                                    <div class="col-lg-3 ">
-                                        <label>P.H. (L):
-                                            &NonBreakingSpace;</label><label><?php echo $row->ph2; ?></label>
-                                    </div>
+
                                     <div class="col-lg-3 ">
                                         <label>6M: &NonBreakingSpace;</label><label><?php echo $row->m6m1; ?></label>
                                     </div>
@@ -142,13 +146,14 @@
                                     <div class="col-lg-3 ">
                                         <label>N.P.C.: &NonBreakingSpace;</label><label><?php echo $row->npc; ?></label>
                                     </div>
+                                    <div class="col-lg-3 ">
+                                        <label>Version: &NonBreakingSpace;</label><label><?php echo $row->version; ?></label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-12 ">
                                 <div class="row">
-                                    <div class="col-lg-3 ">
-                                        <label>Version: &NonBreakingSpace;</label><label><?php echo $row->version; ?></label>
-                                    </div>
+
                                     <div class="col-lg-3 ">
                                         <label>ć-HbRx: &NonBreakingSpace;</label><label><?php echo $row->hbrx1; ?></label>
                                     </div>
