@@ -30,9 +30,41 @@ class Customer extends CI_Controller {
 
     public function index()
 	{
-
-		$this->load->view('insert');
+		$this->load->view('index');
 	}
+
+    public function login()
+    {
+        $this->form_validation->set_rules('username', 'username', 'required');
+        $this->form_validation->set_rules('password', 'password', 'required');
+
+        if ($this->form_validation->run() == FALSE){
+            $this->index();
+        }else{
+
+           $data["fetch_data"] = $this->Cinsert->fetch_udata($this->input->post('username'),$this->input->post('password'));
+
+            if( count($data["fetch_data"])>0)
+            {
+//                $this->load->view('Customer/insertview()');
+                $this->insertview();
+            }
+            else
+                $this->index();
+        }
+    }
+
+
+
+
+
+    public function insertview()
+    {
+
+        $this->load->view('insert');
+    }
+
+
 
 	public function cinsert()
     {
@@ -101,8 +133,6 @@ class Customer extends CI_Controller {
                 'diagnosis' => $this->input->post('diagnosis'),
                 'lense' => $this->input->post('lense'),
                 'total' => $this->input->post('total'),
-
-
 
             );
 

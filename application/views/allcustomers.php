@@ -1,4 +1,21 @@
 <?php include('inc/header.php') ?>
+<style>
+    @media (min-width: 544px){
+
+        .new-1 {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+        .new-1 th, .new-1 td {
+            border: none;
+            text-align: left;
+            padding: 8px;
+        }
+    }
+
+</style>
 <body class="fixed-left">
 
 <!-- Begin page -->
@@ -18,7 +35,7 @@
             <div class="container">
 
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="card-box table-responsive">
                             <h4 class="m-t-0 header-title"><b>Customer Details</b></h4>
 
@@ -33,7 +50,7 @@
 
                             --><?php /*}  */ ?>
 
-                            <table id="datatable-buttons" class="table table-striped table-bordered">
+                            <table id="datatable-buttons" class="table table-striped table-bordered new-1 ">
                                 <thead>
                                 <tr>
                                     <th>Reference Number</th>

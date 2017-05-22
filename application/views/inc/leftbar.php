@@ -9,7 +9,7 @@
             <li class="has_sub">
                 <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-user"></i> <span> Insert </span> <span class="menu-arrow"></span></a>
                 <ul class="list-unstyled">
-                    <li><a href="<?php echo base_url('Customer'); ?>"> <i class="fa fa-plus"></i> Insert Customer</a> </li>
+                    <li><a href="<?php echo base_url('Customer/insertview'); ?>"> <i class="fa fa-plus"></i> Insert Customer</a> </li>
                 </ul>
             </li>
 

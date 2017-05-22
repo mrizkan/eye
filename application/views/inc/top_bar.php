@@ -3,7 +3,7 @@
 
     <!-- LOGO -->
     <div class="topbar-left">
-        <a href="<?php echo base_url(); ?>Customer" class="logo">
+        <a href="<?php echo base_url(); ?>Customer/insertview" class="logo">
             <!--<i class="zmdi zmdi-group-work icon-c-logo"></i>-->
             <span><img src="<?php echo base_url(); ?>images/logo.png" width="100px" height="60px"></span></a>
     </div>
