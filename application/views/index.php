@@ -14,6 +14,7 @@
 <body>
 <div class="wrapper">
     <div class="container">
+        <img src="<?php echo base_url(); ?>images/logo.png" width="200px" height="120px">
         <h1>Eye with us Opticals</h1>
 
         <?= form_open('Customer/login'); ?>
