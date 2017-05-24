@@ -175,19 +175,19 @@
 
                                     <table width="700px" border="1">
                                         <tr>
-                                            <th>a</th>
-                                            <th>a</th>
-                                            <th>a</th>
-                                            <th>a</th>
-                                            <th>a</th>
-                                            <th>a</th>
-                                            <th>a</th>
-                                            <th>a</th>
-                                            <th>9</th>
+                                            <th>R</th>
+                                            <th></th>
+                                            <th>Sph:</th>
+                                            <th>Cyl:</th>
+                                            <th>Axis:</th>
+                                            <th>Sph:</th>
+                                            <th>Cyl:</th>
+                                            <th>Axis:</th>
+                                            <th>L</th>
 
                                         </tr>
-                                        <tr><th>a</th><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>8</td></tr>
-                                        <tr><th>a</th><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>aaaa</td><td>7</td></tr>
+                                        <tr><th>DIST</th><td><?php echo $row->r1; ?></td><td><?php echo $row->sph1; ?></td><td><?php echo $row->cyl1; ?></td><td><?php echo $row->axis1; ?></td><td><?php echo $row->sph2; ?></td><td><?php echo $row->cyl2; ?></td><td><?php echo $row->axis2; ?></td><td><?php echo $row->l1; ?></td></tr>
+                                        <tr><th>NEAR</th><td><?php echo $row->r2; ?></td><td><?php echo $row->sph3; ?></td><td><?php echo $row->cyl3; ?></td><td><?php echo $row->axis3; ?></td><td><?php echo $row->sph4; ?></td><td><?php echo $row->cyl4; ?></td><td><?php echo $row->axis4; ?></td><td><?php echo $row->l2; ?></td></tr>
                                     </table>
                             <br><br>
                             <table width="700px" border="1">
@@ -197,19 +197,41 @@
                                     <th>a</th>
 
                                 </tr>
-                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
-                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
-                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
-                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
-                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
-                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
-                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
-                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
-                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
-                                <tr><th>a</th><td>aaaa</td><td>aaaa</td></tr>
+                                <tr><th>Cornea</th><td><?php echo $row->cornea1; ?></td><td><?php echo $row->cornea2; ?></td></tr>
+                                <tr><th>Iris</th><td><?php echo $row->iris1; ?></td><td><?php echo $row->iris2; ?></td></tr>
+                                <tr><th>Media</th><td><?php echo $row->media1; ?></td><td><?php echo $row->media2; ?></td></tr>
+                                <tr><th>Fundus</th><td><?php echo $row->fundus1; ?></td><td><?php echo $row->fundus2; ?></td></tr>
+                                <tr><th>A/C</th><td><?php echo $row->ac1; ?></td><td><?php echo $row->ac2; ?></td></tr>
+                                <tr><th>P/C</th><td><?php echo $row->pc1; ?></td><td><?php echo $row->pc2; ?></td></tr>
+                                <tr><th>I.O.P.</th><td><?php echo $row->iop1; ?></td><td><?php echo $row->iop2; ?></td></tr>
+
                             </table>
                             <!--if want back button will come here-->
+                                <div class="col-lg-12 ">
+                                    <div class="row">
 
+                                        <div class="col-lg-12 ">
+                                            <br>
+                                            <label>Diagnosis/Remarks &NonBreakingSpace;</label><label><?php echo $row->diagnosis; ?></label>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 ">
+                                    <div class="row">
+
+                                        <div class="col-lg-6 ">
+                                            <br>
+                                            <label>Lense Model</label><label><?php echo $row->lense; ?></label>
+                                        </div>
+                                        <div class="col-lg-6 ">
+                                            <br>
+                                            <label>Total Amount</label><label><?php echo $row->total; ?></label>
+                                        </div>
+
+                                    </div>
+                                </div>
 
 
                     </div>

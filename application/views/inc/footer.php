@@ -1,6 +1,6 @@
 <footer class="footer text-right">
     <?php echo date("Y"); ?> © Eye with us Opticals | Developed By <a
-            href="https://www.facebook.com/RizkaNaflah/?ref=bookmarks"
+            href="https://www.facebook.com/RizkanCreations/"
             target="_blank">Riz Creations</a>. +94 777 943 607
 </footer>
 
