@@ -30,8 +30,15 @@ class Customer extends CI_Controller {
 
     public function index()
 	{
+        $this->session->unset_userdata('username');
 		$this->load->view('index');
 	}
+
+	public function testview(){
+        $data['email'] = 'example@yahoo.com';
+        $message = $this->load->view('testView', $data, true);
+        echo $message;
+    }
 
     public function login()
     {
@@ -42,14 +49,25 @@ class Customer extends CI_Controller {
             $this->index();
         }else{
 
-           $data["fetch_data"] = $this->Cinsert->fetch_udata($this->input->post('username'),$this->input->post('password'));
+            $username = $this->input->post('username');
+            $password = $this->input->post('password');
+
+           $data["fetch_data"] = $this->Cinsert->fetch_udata($username, $password);
 
             if( count($data["fetch_data"])>0)
             {
 //                $this->load->view('Customer/insertview()');
-                $this->insertview();
+                $session_data = array(
+                    'username' => $username
+                );
+                $this->session->set_userdata($session_data);
+//                print_r($this->session->userdata->username);exit;
+
+                redirect(base_url().'Customer/insertview');
+                /*$this->insertview();*/
             }
             else
+                $this->session->set_flashdata('error', 'Invalid Username or Password');
                 $this->index();
         }
     }
@@ -74,7 +92,7 @@ class Customer extends CI_Controller {
         if ($this->form_validation->run() == FALSE)
         {
 
-            $this->load->view('Customer');
+            $this->load->view('Customer/insertview');
 
         }
         else
@@ -84,6 +102,7 @@ class Customer extends CI_Controller {
             $data2 = array(
                 'cname' => $this->input->post('cname'),
                 'rnum' => $this->input->post('rnum'),
+                'date' => $this->input->post('date'),
                 'address' => $this->input->post('address'),
                 'age' => $this->input->post('age'),
                 'mobile' => $this->input->post('mobile'),
@@ -139,7 +158,7 @@ class Customer extends CI_Controller {
             $this->Cinsert->insert($data2);
             $this->session->set_flashdata('msg', 'Customer Inserted Successfully');
             $this->session->flashdata('msg');
-            redirect("Customer");
+            redirect("Customer/insertview");
 
 
         }

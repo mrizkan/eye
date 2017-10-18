@@ -27,16 +27,16 @@
                 <div class="dropdown-menu dropdown-menu-right dropdown-arrow profile-dropdown " aria-labelledby="Preview">
                     <!-- item-->
                     <div class="dropdown-item noti-title">
-                        <h5 class="text-overflow"><small>Welcome ! Rizwan</small> </h5>
+                        <h5 class="text-overflow"><small>Welcome ! <?= $this->session->username ?></small> </h5>
                     </div>
 
                     <!-- item-->
 
 
                     <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                   <!-- <a href="javascript:void(0);" class="dropdown-item notify-item">
                         <i class="zmdi zmdi-settings"></i> <span>Settings</span>
-                    </a>
+                    </a>-->
 
                     <!-- item-->
 

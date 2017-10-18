@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html >
+<?php include('inc/header.php') ?>
 <head>
     <meta charset="UTF-8">
     <title>Eye with us Opticals</title>
@@ -18,8 +19,20 @@
         <h1>Eye with us Opticals</h1>
 
         <?= form_open('Customer/login'); ?>
-            <input type="text" name="username" autocomplete="off" placeholder="Username">
-            <input type="password" name="password" autocomplete="off" placeholder="Password">
+        <div class="form-group center-block text-center   " >
+
+            <strong class="text-danger " >
+                <?= $this->session->flashdata("error"); ?>
+            </strong>
+                <!--<strong class="text-danger " > <?/*= @$error  */?> </strong>-->
+
+
+        </div>
+
+        <input type="text" required="" name="username" autocomplete="off" placeholder="User Name" data-parsley-id="34">
+        <!--   <input type="text" name="username" autocomplete="off" placeholder="Username">
+  <input type="password" name="password" autocomplete="off" placeholder="Password">-->
+        <input type="password" required="" name="password" autocomplete="off" placeholder="Password" data-parsley-id="34">
             <button type="submit">Login</button>
         <?php echo form_close(); ?>
     </div>

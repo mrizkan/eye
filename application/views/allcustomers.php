@@ -1,4 +1,5 @@
 <?php include('inc/header.php') ?>
+<link href="<?php base_url()?>plugins/bootstrap-sweetalert/sweet-alert.css" rel="stylesheet" type="text/css" />
 <style>
     @media (min-width: 544px){
 
@@ -53,10 +54,10 @@
                             <table id="datatable-buttons" class="table table-striped table-bordered new-1 ">
                                 <thead>
                                 <tr>
-                                    <th>Reference Number</th>
-                                    <th>Customer Name</th>
+                                    <th style="width: 2%">Reference Number</th>
+                                    <th style="width: 20%">Customer Name</th>
                                     <th>Address</th>
-                                    <th>Mobile Number</th>
+                                    <th style="width: 10%">Mobile Number</th>
                                     <th>Option</th>
 
                                 </tr>
@@ -69,7 +70,7 @@
                                     foreach ($cdata->result() as $row) {
                                         ?>
                                         <tr>
-                                            <td><?php echo $row->rnum; ?></td>
+                                            <td width="1%"><?php echo $row->rnum; ?></td>
                                             <td><?php echo $row->cname; ?></td>
                                             <td><?php echo $row->address; ?></td>
                                             <td><?php echo $row->mobile; ?></td>
@@ -78,13 +79,20 @@
                                                             class="btn btn-warning-outline waves-effect waves-light">
                                                         View
                                                     </button>
-                                                </a>
+                                                </a> &nbsp;
                                                 <a href="<?= base_url() . 'Vcustomer/cprint/' . $row->cid ?>">
                                                     <button type="button"
-                                                            class="btn btn-danger-outline waves-effect waves-light">
+                                                            class="btn btn-dark-outline waves-effect waves-light" id="sa-params">
                                                         Print
                                                     </button>
-                                                </a></td>
+                                               </a> &nbsp;
+                                                <a href="<?= base_url() . 'Vcustomer/cprint/' . $row->cid ?>">
+                                                    <button type="button"
+                                                            class="btn btn-danger-outline waves-effect waves-light" id="sa-params">
+                                                        Delete
+                                                    </button>
+                                                </a>
+                                                </td>
 
                                         </tr>
 
@@ -110,6 +118,9 @@
                 <!-- end row -->
 
                 <?php include('inc/footer.php') ?>
+
+                <script src="<?php base_url() ?>plugins/bootstrap-sweetalert/sweet-alert.min.js"></script>
+
 
                 <script type="text/javascript">
                     $(document).ready(function () {

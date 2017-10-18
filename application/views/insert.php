@@ -1,3 +1,5 @@
+
+
 <?php include('inc/header.php') ?>
     <body class="fixed-left">
 
@@ -61,7 +63,7 @@
                                 <div class="col-lg-12 ">
 
                                     <div class="row">
-                                        <div class="col-lg-9 ">
+                                        <div class="col-lg-6 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1">Customer Name</label>
                                                 <input type="text" class="form-control" required="" name="cname"
@@ -79,6 +81,18 @@
                                                        value="<?php echo set_value('rnum'); ?>">
 
                                             </fieldset>
+                                        </div>
+                                        <div class="col-lg-3 ">
+                                            <div class="form-group">
+                                                <label>Date</label>
+                                                <div>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" name="date" placeholder="mm/dd/yyyy" id="datepicker">
+                                                        <span class="input-group-addon bg-custom b-0"><i class="icon-calender"></i></span>
+                                                    </div><!-- input-group -->
+                                                </div>
+                                            </div>
+
                                         </div>
 
                                         <div class="col-lg-12 ">

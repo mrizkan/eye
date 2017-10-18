@@ -13,9 +13,6 @@
     var resizefunc = [];
 </script>
 
-
-
-
 <!-- jQuery  -->
 
 <script src="<?= base_url() ?>js/tether.min.js"></script><!-- Tether for Bootstrap -->
@@ -34,7 +31,18 @@
 <script src="<?= base_url() ?>plugins/datatables/dataTables.bootstrap4.min.js"></script>
 
 <!-- Buttons examples -->
+<script src="<?= base_url() ?>plugins/moment/moment.js"></script>
+
 <script src="<?= base_url() ?>plugins/datatables/dataTables.buttons.min.js"></script>
+<script src="<?= base_url() ?>plugins/timepicker/bootstrap-timepicker.min.js"></script>
+<script src="<?= base_url() ?>plugins/mjolnic-bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+
+<script src="<?= base_url() ?>plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="<?= base_url() ?>plugins/clockpicker/bootstrap-clockpicker.js"></script>
+<script src="<?= base_url() ?>plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="<?= base_url() ?>pages/jquery.form-pickers.init.js"></script>
+
+
 <script src="<?= base_url() ?>plugins/datatables/buttons.bootstrap4.min.js"></script>
 <script src="<?= base_url() ?>plugins/datatables/jszip.min.js"></script>
 <script src="<?= base_url() ?>plugins/datatables/pdfmake.min.js"></script>

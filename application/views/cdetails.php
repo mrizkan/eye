@@ -91,7 +91,7 @@
                         <div class="col-lg-12 ">
 
                             <div class="row">
-                                <div class="col-lg-9 ">
+                                <div class="col-lg-7 ">
                                     <fieldset class="form-group">
                                         <label for="exampleInputEmail1">Customer Name</label>
                                         <input type="text" class="form-control" name="cname"
@@ -108,6 +108,16 @@
                                                placeholder="Reference Number" data-parsley-id="56"
                                                readonly
                                                value="<?php echo $row->rnum; ?>">
+
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-2">
+                                    <fieldset class="form-group">
+                                        <label for="exampleInputEmail1">Registered Date</label>
+                                        <label for="exampleInputEmail1"><?php echo $row->date; ?></label>
+                                        <!--<input type="text" class="form-control" name="date"
+                                               placeholder="date" data-parsley-id="34" readonly
+                                               value="<?php /*echo $row->date; */?>">-->
 
                                     </fieldset>
                                 </div>
@@ -759,7 +769,13 @@
 
                 </div><!-- end row -->
                 <div class="button-list">
-                    <button type="button" class="btn btn-primary btn-rounded waves-effect waves-light" style="float: right" onclick="window.location='<?php echo site_url("Vcustomer/view");?>'">
+                    <a href="<?= base_url() . 'Vcustomer/cprint/' . $row->cid ?>">
+                        <button type="button"
+                                class="btn btn-dark-outline waves-effect waves-light" style="float: right">
+                            Print
+                        </button>
+                    </a>
+                    <button type="button" class="btn btn-purple-outline waves-effect waves-light" style="float: right" onclick="window.location='<?php echo site_url("Vcustomer/view");?>'">
                                                    <span class="btn-label"><i class="fa fa-arrow-left"></i>
                                                    </span>Back</button>
                     <?php echo form_close(); ?>
