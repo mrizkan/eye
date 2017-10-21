@@ -66,7 +66,7 @@
                                         <div class="col-lg-6 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1">Customer Name</label>
-                                                <input type="text" class="form-control" required="" name="cname"
+                                                <input type="text" class="form-control" required  name="cname"
                                                        placeholder="Customer Name" data-parsley-id="34"
                                                        value="<?php echo set_value('cname'); ?>">
 
@@ -76,7 +76,7 @@
                                         <div class="col-lg-3 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1">Reference Number</label>
-                                                <input type="text" class="form-control" required="" name="rnum"
+                                                <input type="text" class="form-control"  name="rnum"
                                                        placeholder="Reference Number" data-parsley-id="56"
                                                        value="<?php echo set_value('rnum'); ?>">
 
@@ -98,7 +98,7 @@
                                         <div class="col-lg-12 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputPassword1">Address</label>
-                                                <input type="text" class="form-control" required="" name="address"
+                                                <input type="text" class="form-control"  name="address"
                                                        placeholder="Address" data-parsley-id="34"
                                                        value="<?php echo set_value('address'); ?>">
                                             </fieldset>
@@ -106,7 +106,7 @@
                                         <div class="col-lg-3 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputPassword1">Age</label>
-                                                <input type="text" class="form-control" required="" name="age"
+                                                <input type="text" class="form-control"  name="age"
                                                        placeholder="Age" data-parsley-maxlength="2"
                                                        data-parsley-type="number" data-parsley-id="34"
                                                        value="<?php echo set_value('age'); ?>">
@@ -115,7 +115,7 @@
                                         <div class="col-lg-3 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputPassword1">Mobile Number</label>
-                                                <input type="text" class="form-control" required="" name="mobile"
+                                                <input type="text" class="form-control" required  name="mobile"
                                                        placeholder="Mobile Number" data-parsley-minlength="10"
                                                        data-parsley-type="number" data-parsley-id="34"
                                                        value="<?php echo set_value('mobile'); ?>">
@@ -282,7 +282,7 @@
                                         <div class="col-lg-2 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1"><br></label>
-                                                <input type="text" class="form-control" required="" name="r1"
+                                                <input type="text" class="form-control"  name="r1"
                                                        placeholder="" data-parsley-id="56"
                                                        value="<?php echo set_value('r1'); ?>">
 
@@ -292,7 +292,7 @@
                                         <div class="col-lg-1 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1">Sph:</label>
-                                                <input type="text" class="form-control" required="" name="sph1"
+                                                <input type="text" class="form-control"  name="sph1"
                                                        placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('sph1'); ?>">
 
@@ -322,7 +322,7 @@
                                         <div class="col-lg-1 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1">Sph:</label>
-                                                <input type="text" class="form-control" required="" name="sph2"
+                                                <input type="text" class="form-control"  name="sph2"
                                                        placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('sph2'); ?>">
 
@@ -352,7 +352,7 @@
                                         <div class="col-lg-2 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1" style="margin-left: 49%">L</label>
-                                                <input type="text" class="form-control" required="" name="l1"
+                                                <input type="text" class="form-control"  name="l1"
                                                        placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('l2'); ?>">
 
@@ -373,7 +373,7 @@
                                         <div class="col-lg-2 ">
                                             <fieldset class="form-group">
 
-                                                <input type="text" class="form-control" required="" name="r2"
+                                                <input type="text" class="form-control"  name="r2"
                                                        placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('r2'); ?>">
 
@@ -383,7 +383,7 @@
                                         <div class="col-lg-1 ">
                                             <fieldset class="form-group">
 
-                                                <input type="text" class="form-control" required="" name="sph3"
+                                                <input type="text" class="form-control"  name="sph3"
                                                        placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('sph3'); ?>">
 
@@ -414,7 +414,7 @@
                                         <div class="col-lg-1 ">
                                             <fieldset class="form-group">
 
-                                                <input type="text" class="form-control" required="" name="sph4"
+                                                <input type="text" class="form-control"  name="sph4"
                                                        placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('sph4'); ?>">
 
@@ -444,7 +444,7 @@
                                         <div class="col-lg-2 ">
                                             <fieldset class="form-group">
 
-                                                <input type="text" class="form-control" required="" name="l2"
+                                                <input type="text" class="form-control"  name="l2"
                                                        placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('l2'); ?>">
 
@@ -668,7 +668,7 @@
                                         </div>
                                         <div class="col-lg-12 ">
                                             <fieldset class="form-group">
-                                                <textarea class="form-control" required="" id="description"
+                                                <textarea class="form-control"  id="description"
                                                           name="diagnosis"
                                                           rows="3" placeholder=""></textarea>
                                             </fieldset>
@@ -676,7 +676,7 @@
                                         <div class="col-lg-6 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1">Lense Model</label>
-                                                <input type="text" class="form-control" required="" name="lense"
+                                                <input type="text" class="form-control"  name="lense"
                                                        placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('lense'); ?>">
 
@@ -686,7 +686,7 @@
                                         <div class="col-lg-6 ">
                                             <fieldset class="form-group">
                                                 <label for="exampleInputEmail1">Total Amount</label>
-                                                <input type="text" class="form-control" required="" name="total"
+                                                <input type="text" class="form-control"  name="total"
                                                        placeholder="" data-parsley-id="34"
                                                        value="<?php echo set_value('total'); ?>">
 
